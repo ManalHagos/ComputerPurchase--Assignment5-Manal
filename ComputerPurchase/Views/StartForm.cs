@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ComputerPurchase
 {
-    public partial class Form1 : Form
+    public partial class StartForm : Form
     {
-        public Form1()
+        public StartForm()
         {
             InitializeComponent();
+        }
+
+        private void NewOrder_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void SavedOrder_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
