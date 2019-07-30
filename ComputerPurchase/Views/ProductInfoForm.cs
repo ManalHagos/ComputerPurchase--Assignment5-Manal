@@ -15,6 +15,16 @@ namespace ComputerPurchase
         public ProductInfoForm()
         {
             InitializeComponent();
+            
         }
+
+       
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

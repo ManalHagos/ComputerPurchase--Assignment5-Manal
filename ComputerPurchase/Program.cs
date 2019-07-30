@@ -1,5 +1,6 @@
-﻿using ComputerPurchase.Data;
-using System;
+﻿using System;
+using ComputerPurchase.Data;
+using ComputerPurchase.Views;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +11,9 @@ namespace ComputerPurchase
     public static class Program
     {
         public static Product product;
+        public static SelectForm selectForm;
+        public static ProductInfoForm productInfoForm;
+        public static StartForm startForm;
 
         public static SplashScreen splashScreen;
 
@@ -21,10 +25,11 @@ namespace ComputerPurchase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            product = new Product();
-
+            selectForm = new SelectForm();
             splashScreen = new SplashScreen();
+            product = new Product();
+            productInfoForm = new ProductInfoForm();
+            startForm = new StartForm();
 
             Application.Run(splashScreen);
         }

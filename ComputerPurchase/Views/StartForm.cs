@@ -19,12 +19,19 @@ namespace ComputerPurchase
 
         private void NewOrder_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Program.startForm.Hide();
+            Program.selectForm.Show();
         }
 
         private void SavedOrder_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Program.startForm.Hide();
+            Program.productInfoForm.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

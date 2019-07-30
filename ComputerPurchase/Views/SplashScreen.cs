@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ComputerPurchase
 {
     public partial class SplashScreen : Form
     {
-        public StartForm startForm;
+       
         public SplashScreen()
         {
             InitializeComponent();
-            startForm = new StartForm();
+        
 
       
         }
@@ -24,8 +25,8 @@ namespace ComputerPurchase
         private void timer_Tick(object sender, EventArgs e)
         {
            timer.Enabled = false;
-           this.Hide();
-           startForm.Show();
+           Program.splashScreen.Hide();
+           Program.startForm.Show();
         }
 
         private void SplashScreen_Load(object sender, EventArgs e)
