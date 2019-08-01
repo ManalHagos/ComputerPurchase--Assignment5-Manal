@@ -11,11 +11,12 @@ namespace ComputerPurchase
     public static class Program
     {
         public static Product product;
+        public static SplashScreen splashScreen;
+        public static StartForm startForm;
         public static SelectForm selectForm;
         public static ProductInfoForm productInfoForm;
-        public static StartForm startForm;
-
-        public static SplashScreen splashScreen;
+        public static OrderForm orderForm;
+        public static AboutForm aboutForm;
 
         /// <summary>
         /// The main entry point for the application.
@@ -25,13 +26,14 @@ namespace ComputerPurchase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            selectForm = new SelectForm();
-            splashScreen = new SplashScreen();
             product = new Product();
-            productInfoForm = new ProductInfoForm();
+            splashScreen = new SplashScreen();
             startForm = new StartForm();
-
-            Application.Run(splashScreen);
+            selectForm = new SelectForm();
+            productInfoForm = new ProductInfoForm();
+            orderForm = new OrderForm();
+            aboutForm = new AboutForm();
+            Application.Run(orderForm);
         }
     }
 }

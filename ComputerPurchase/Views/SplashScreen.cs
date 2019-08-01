@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace ComputerPurchase
+namespace ComputerPurchase.Views
 {
     public partial class SplashScreen : Form
     {
