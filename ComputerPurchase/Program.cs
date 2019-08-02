@@ -33,7 +33,7 @@ namespace ComputerPurchase
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
             aboutForm = new AboutForm();
-            Application.Run(orderForm);
+            Application.Run(splashScreen);
         }
     }
 }

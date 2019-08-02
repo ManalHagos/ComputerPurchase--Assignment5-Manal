@@ -22,8 +22,8 @@ namespace ComputerPurchase.Views
         {
             openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            var result = openFileDialog.ShowDialog();
-            if (result != DialogResult.Cancel)
+            var _result = openFileDialog.ShowDialog();
+            if (_result != DialogResult.Cancel)
             {
                 // open file stream to read
                 using (StreamReader inputStream = new StreamReader(
