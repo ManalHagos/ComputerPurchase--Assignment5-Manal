@@ -65,13 +65,13 @@
             this.TotalLabel = new System.Windows.Forms.Label();
             this.SaleTaxsLabel = new System.Windows.Forms.Label();
             this.PriceLabel = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.TotalLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.FinishButton = new System.Windows.Forms.Button();
             this.ProductPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.TotalLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderMenuStrip.SuspendLayout();
             this.SystemBox.SuspendLayout();
             this.PriceBox.SuspendLayout();
@@ -126,7 +126,7 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(132, 30);
             this.backToolStripMenuItem.Text = "Back";
             // 
             // helpToolStripMenuItem
@@ -142,6 +142,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // SystemBox
             // 
@@ -427,6 +428,26 @@
             this.PriceLabel.TabIndex = 0;
             this.PriceLabel.Text = "Price";
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(5, 27);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.TotalLine});
+            this.shapeContainer1.Size = new System.Drawing.Size(493, 194);
+            this.shapeContainer1.TabIndex = 4;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // TotalLine
+            // 
+            this.TotalLine.BorderWidth = 2;
+            this.TotalLine.Name = "TotalLine";
+            this.TotalLine.X1 = 10;
+            this.TotalLine.X2 = 467;
+            this.TotalLine.Y1 = 111;
+            this.TotalLine.Y2 = 111;
+            // 
             // BackButton
             // 
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -479,26 +500,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(223, 183);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(5, 27);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.TotalLine});
-            this.shapeContainer1.Size = new System.Drawing.Size(493, 194);
-            this.shapeContainer1.TabIndex = 4;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // TotalLine
-            // 
-            this.TotalLine.BorderWidth = 2;
-            this.TotalLine.Name = "TotalLine";
-            this.TotalLine.X1 = 10;
-            this.TotalLine.X2 = 467;
-            this.TotalLine.Y1 = 111;
-            this.TotalLine.Y2 = 111;
             // 
             // OrderForm
             // 

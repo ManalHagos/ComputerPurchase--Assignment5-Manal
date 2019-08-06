@@ -54,5 +54,34 @@ namespace ComputerPurchase.Views
             this.Hide();
             Program.selectForm.Show();
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog.FileName = "Product.txt";
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            var _result = saveFileDialog.ShowDialog();
+        }
+
+      
+        public void FillForm(List<string> info)
+        {
+            Product.Text = info[0];
+            Cost.Text = info[1];
+            Manufaturer.Text = info[2];
+            Model.Text = info[3];
+            Condition.Text = info[14];
+            PlatForm.Text = info[17];
+            OS.Text = info[15];
+            size.Text = info[6];
+            MemoryBox.Text = info[7];
+            BrandBox.Text = info[10];
+            TypeBox.Text = info[11];
+            speed.Text = info[12];
+            number.Text = info[13];
+            WebCamBox.Text = info[30];
+            GPUBox.Text = info[19];
+            HDDtBox.Text = info[17];
+        }
     }
 }

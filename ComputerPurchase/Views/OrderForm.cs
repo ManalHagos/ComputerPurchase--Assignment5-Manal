@@ -47,5 +47,10 @@ namespace ComputerPurchase.Views
         {
             MessageBox.Show("thank you for your business and your order will be processed in 7-10 business days");
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.Show();
+        }
     }
 }

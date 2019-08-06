@@ -128,7 +128,7 @@
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
             this.ProductDataGridView.DataSource = this.productsBindingSource;
-            this.ProductDataGridView.Location = new System.Drawing.Point(19, 68);
+            this.ProductDataGridView.Location = new System.Drawing.Point(19, 73);
             this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ProductDataGridView.MultiSelect = false;
             this.ProductDataGridView.Name = "ProductDataGridView";

@@ -17,9 +17,6 @@ namespace ComputerPurchase.Views
         public SplashScreen()
         {
             InitializeComponent();
-        
-
-      
         }
 
         private void timer_Tick(object sender, EventArgs e)

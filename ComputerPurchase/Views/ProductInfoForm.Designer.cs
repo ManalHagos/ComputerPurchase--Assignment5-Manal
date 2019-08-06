@@ -58,11 +58,11 @@
             this.SpeedLabel = new System.Windows.Forms.Label();
             this.WebCamBox = new System.Windows.Forms.TextBox();
             this.HDDtBox = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.speed = new System.Windows.Forms.TextBox();
             this.GPUBox = new System.Windows.Forms.TextBox();
             this.TypeBox = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.number = new System.Windows.Forms.TextBox();
+            this.size = new System.Windows.Forms.TextBox();
             this.BrandBox = new System.Windows.Forms.TextBox();
             this.MemoryBox = new System.Windows.Forms.TextBox();
             this.NumberLabel = new System.Windows.Forms.Label();
@@ -74,6 +74,7 @@
             this.AnotherProductButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip.SuspendLayout();
             this.ProductInfoBox.SuspendLayout();
             this.TechBox.SuspendLayout();
@@ -120,6 +121,7 @@
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -303,11 +305,11 @@
             this.TechBox.Controls.Add(this.SpeedLabel);
             this.TechBox.Controls.Add(this.WebCamBox);
             this.TechBox.Controls.Add(this.HDDtBox);
-            this.TechBox.Controls.Add(this.textBox5);
+            this.TechBox.Controls.Add(this.speed);
             this.TechBox.Controls.Add(this.GPUBox);
             this.TechBox.Controls.Add(this.TypeBox);
-            this.TechBox.Controls.Add(this.textBox6);
-            this.TechBox.Controls.Add(this.textBox4);
+            this.TechBox.Controls.Add(this.number);
+            this.TechBox.Controls.Add(this.size);
             this.TechBox.Controls.Add(this.BrandBox);
             this.TechBox.Controls.Add(this.MemoryBox);
             this.TechBox.Controls.Add(this.NumberLabel);
@@ -381,13 +383,13 @@
             this.HDDtBox.Size = new System.Drawing.Size(156, 30);
             this.HDDtBox.TabIndex = 4;
             // 
-            // textBox5
+            // speed
             // 
-            this.textBox5.Location = new System.Drawing.Point(564, 136);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(153, 30);
-            this.textBox5.TabIndex = 4;
+            this.speed.Location = new System.Drawing.Point(564, 136);
+            this.speed.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.speed.Name = "speed";
+            this.speed.Size = new System.Drawing.Size(153, 30);
+            this.speed.TabIndex = 4;
             // 
             // GPUBox
             // 
@@ -405,21 +407,21 @@
             this.TypeBox.Size = new System.Drawing.Size(153, 30);
             this.TypeBox.TabIndex = 4;
             // 
-            // textBox6
+            // number
             // 
-            this.textBox6.Location = new System.Drawing.Point(564, 82);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(153, 30);
-            this.textBox6.TabIndex = 4;
+            this.number.Location = new System.Drawing.Point(564, 82);
+            this.number.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.number.Name = "number";
+            this.number.Size = new System.Drawing.Size(153, 30);
+            this.number.TabIndex = 4;
             // 
-            // textBox4
+            // size
             // 
-            this.textBox4.Location = new System.Drawing.Point(564, 24);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 30);
-            this.textBox4.TabIndex = 4;
+            this.size.Location = new System.Drawing.Point(564, 24);
+            this.size.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.size.Name = "size";
+            this.size.Size = new System.Drawing.Size(153, 30);
+            this.size.TabIndex = 4;
             // 
             // BrandBox
             // 
@@ -534,6 +536,9 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // saveFileDialog
+            // 
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -608,16 +613,17 @@
         private System.Windows.Forms.Label MemoryLabel;
         private System.Windows.Forms.TextBox WebCamBox;
         private System.Windows.Forms.TextBox HDDtBox;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox speed;
         private System.Windows.Forms.TextBox GPUBox;
         private System.Windows.Forms.TextBox TypeBox;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox number;
+        private System.Windows.Forms.TextBox size;
         private System.Windows.Forms.TextBox BrandBox;
         private System.Windows.Forms.TextBox MemoryBox;
         private System.Windows.Forms.Label YourSelectionLabel;
         private System.Windows.Forms.Button AnotherProductButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
