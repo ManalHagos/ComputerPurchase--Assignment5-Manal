@@ -52,5 +52,16 @@ namespace ComputerPurchase.Views
         {
             Program.aboutForm.Show();
         }
+
+        public void FillForm(List<string> info)
+        {
+            PlatFormBox.Text = info[0];
+            ManufacturerBox.Text = info[1];
+            ConditionBox.Text = info[2];
+            ModelBox.Text = info[3];
+            richTextBox.Text = info[4];
+            richTextBox.Text = info[5];
+
+        }
     }
 }

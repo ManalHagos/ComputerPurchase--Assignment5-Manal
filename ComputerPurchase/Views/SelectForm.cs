@@ -31,7 +31,8 @@ namespace ComputerPurchase.Views
             }
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
-            
+            ProductDataGridView.ClearSelection();
+            NextButton.Enabled = false;
         }
 
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace ComputerPurchase.Views
             //    outputString += cells[index].Value.ToString() + "";
             //}
             textBox.Text = ProductDataGridViewSelectedItem();
+            NextButton.Enabled = true;
             //Program.p.id = int.Parse(cells[(int)StudentField.ID].Value.ToString());
             //Program.student.StudentID = cells[(int)StudentField.STUDENT_ID].Value.ToString();
             //Program.student.FirstName = cells[(int)StudentField.FIRST_NAME].Value.ToString();
@@ -93,7 +95,7 @@ namespace ComputerPurchase.Views
             }
 
 
-
+            Program.productInfoForm.NextButton.Enabled = true;
             Program.productInfoForm.FillForm(columnInfo);
 
             Program.productInfoForm.Show();

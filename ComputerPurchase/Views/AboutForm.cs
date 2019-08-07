@@ -101,5 +101,10 @@ namespace ComputerPurchase.Views
             }
         }
         #endregion
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.Hide();
+        }
     }
 }

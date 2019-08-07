@@ -143,6 +143,7 @@
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(278, 30);
             this.sToolStripMenuItem.Text = "Select Another Product";
+            this.sToolStripMenuItem.Click += new System.EventHandler(this.AnotherProductButton_Click);
             // 
             // ProductIDLabel
             // 
@@ -536,9 +537,6 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // saveFileDialog
-            // 
-            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -565,6 +563,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductInfoForm";
+            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ProductInfoBox.ResumeLayout(false);
@@ -623,7 +622,7 @@
         private System.Windows.Forms.Label YourSelectionLabel;
         private System.Windows.Forms.Button AnotherProductButton;
         private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button NextButton;
+        public System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
