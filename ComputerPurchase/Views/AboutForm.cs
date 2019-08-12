@@ -106,5 +106,7 @@ namespace ComputerPurchase.Views
         {
             Program.aboutForm.Hide();
         }
+
+       
     }
 }

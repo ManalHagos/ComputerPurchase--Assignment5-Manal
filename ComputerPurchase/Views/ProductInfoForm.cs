@@ -18,7 +18,7 @@ namespace ComputerPurchase.Views
         public ProductInfoForm()
         {
             InitializeComponent();
-            _productInfo = new List<string>();
+            
             NextButton.Enabled = false;
         }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,8 +34,12 @@ namespace ComputerPurchase.Views
                     File.Open(openFileDialog.FileName, FileMode.Open)))
                 {
                     // read stuff from the file into the Student object
-                    Program.product.productID = short.Parse(inputStream.ReadLine());
-                    Program.product.manufacturer = inputStream.ReadLine();
+                    PlatForm.Text = inputStream.ReadLine();
+
+
+
+                    inputStream.Close();
+                    inputStream.Dispose();
                 }
 
                 NextButton.Enabled = true;
@@ -49,12 +53,14 @@ namespace ComputerPurchase.Views
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            _productInfo = new List<string>();
             _productInfo.Add(PlatForm.Text); //0
             _productInfo.Add(Manufaturer.Text);
             _productInfo.Add(Condition.Text);
             _productInfo.Add(Model.Text);
             _productInfo.Add(size.Text);
             _productInfo.Add(MemoryBox.Text);
+            _productInfo.Add(Cost.Text); //6
             Program.orderForm.FillForm(_productInfo);
             Program.orderForm.Show();
             Program.selectForm.Hide();
@@ -72,6 +78,21 @@ namespace ComputerPurchase.Views
             saveFileDialog.FileName = "Product.txt";
             saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             var _result = saveFileDialog.ShowDialog();//add function to save to file stream writer
+
+            if (_result != DialogResult.Cancel)
+            {
+                using (StreamWriter outputStream = new StreamWriter(
+                    File.Open(saveFileDialog.FileName, FileMode.Create)))
+                {
+
+                    outputStream.WriteLine(PlatForm.Text);
+
+
+
+                    outputStream.Close();
+                    outputStream.Dispose();
+                }
+            }
         }
 
       

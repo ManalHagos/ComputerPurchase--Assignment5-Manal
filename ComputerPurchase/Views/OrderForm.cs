@@ -59,8 +59,11 @@ namespace ComputerPurchase.Views
             ManufacturerBox.Text = info[1];
             ConditionBox.Text = info[2];
             ModelBox.Text = info[3];
-            richTextBox.Text = info[4];
-            richTextBox.Text = info[5];
+            richTextBox.Text = info[4] + "\n\n" + info[5];
+            PriceTextBox.Text = "$" + info[6];
+            SalesTextBox.Text = (decimal.Parse(info[6]) * 0.13M).ToString("c");
+            TotalTextBox.Text = (decimal.Parse(info[6]) + (decimal.Parse(info[6]) * .13m)).ToString("c");
+            //richTextBox.Text = info[5];
 
         }
     }

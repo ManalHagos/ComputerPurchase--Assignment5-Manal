@@ -14,8 +14,7 @@ namespace ComputerPurchase.Views
 {
     public partial class SelectForm : Form
     {
-        private object _productBindingSource;
-
+        
         public SelectForm()
         {
             InitializeComponent();
