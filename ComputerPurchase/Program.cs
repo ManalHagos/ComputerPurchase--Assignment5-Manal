@@ -5,7 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * CompuuterPurchase
+ * Manal Hagos
+ * 301027317
+ * JULY/28/2019
+ * THIS IS THE PROGRAM PAGE
+ */
 namespace ComputerPurchase
 {
     public static class Program
@@ -33,7 +39,7 @@ namespace ComputerPurchase
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
             aboutForm = new AboutForm();
-            Application.Run(productInfoForm);
+            Application.Run(selectForm);
         }
     }
 }

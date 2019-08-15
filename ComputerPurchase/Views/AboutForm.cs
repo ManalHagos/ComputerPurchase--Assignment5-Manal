@@ -6,6 +6,13 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*
+ * CompuuterPurchase
+ * Manal Hagos
+ * 301027317
+ * JULY/28/2019
+ * THIS IS THE AboutForm
+ */
 
 namespace ComputerPurchase.Views
 {

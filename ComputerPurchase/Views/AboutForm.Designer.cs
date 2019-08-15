@@ -88,7 +88,7 @@
             this.labelProductName.Name = "labelProductName";
             this.labelProductName.Size = new System.Drawing.Size(630, 38);
             this.labelProductName.TabIndex = 19;
-            this.labelProductName.Text = "Product Name";
+            this.labelProductName.Text = "Product Name: ComputerPurchase";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelVersion
@@ -124,7 +124,7 @@
             this.labelCompanyName.Name = "labelCompanyName";
             this.labelCompanyName.Size = new System.Drawing.Size(630, 38);
             this.labelCompanyName.TabIndex = 22;
-            this.labelCompanyName.Text = "Company Name";
+            this.labelCompanyName.Text = "Company Name:  Manal";
             this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxDescription
@@ -139,7 +139,7 @@
             this.textBoxDescription.Size = new System.Drawing.Size(630, 281);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Description";
+            this.textBoxDescription.Text = "Discription contact no.4168484593";
             // 
             // okButton
             // 

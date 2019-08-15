@@ -8,6 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*
+ * CompuuterPurchase
+ * Manal Hagos
+ * 301027317
+ * JULY/28/2019
+ * THIS IS THE OrderForm
+ */
 
 namespace ComputerPurchase.Views
 {
@@ -22,21 +29,19 @@ namespace ComputerPurchase.Views
         {
             this.Hide();
             Program.productInfoForm.Show();
-            
-            
         }
-
+        // to print
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
             ProductPrintForm.Print();
         }
-
+        // to exit using exit tool strip menue 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //to exit using cancel button
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,18 +57,19 @@ namespace ComputerPurchase.Views
         {
             Program.aboutForm.Show();
         }
-
+        // to display the user input in orderForm
         public void FillForm(List<string> info)
         {
             PlatFormBox.Text = info[0];
             ManufacturerBox.Text = info[1];
             ConditionBox.Text = info[2];
             ModelBox.Text = info[3];
-            richTextBox.Text = info[4] + "\n\n" + info[5];
+            richTextBox.Text = info[4] + "\n\n" + info[5];/* + "\n\n" + info[10]; + "\n\n" + info[11] + "\n\n" + info[13];/* + "\n\n" +
+            info[12] +"\n\n"+info[17]+"\n\n"+info[19]+"\n\n"+info[30];*/
             PriceTextBox.Text = "$" + info[6];
             SalesTextBox.Text = (decimal.Parse(info[6]) * 0.13M).ToString("c");
             TotalTextBox.Text = (decimal.Parse(info[6]) + (decimal.Parse(info[6]) * .13m)).ToString("c");
-            //richTextBox.Text = info[5];
+           
 
         }
     }

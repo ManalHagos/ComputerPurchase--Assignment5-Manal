@@ -8,6 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*
+ * CompuuterPurchase
+ * Manal Hagos
+ * 301027317
+ * JULY/28/2019
+ * THIS IS THE ProductInfoForm
+ */
 
 namespace ComputerPurchase.Views
 {
@@ -21,6 +28,7 @@ namespace ComputerPurchase.Views
             
             NextButton.Enabled = false;
         }
+        // to open a file
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
@@ -35,9 +43,21 @@ namespace ComputerPurchase.Views
                 {
                     // read stuff from the file into the Student object
                     PlatForm.Text = inputStream.ReadLine();
-
-
-
+                    Product.Text = inputStream.ReadLine();
+                    Manufaturer.Text = inputStream.ReadLine();
+                    MemoryBox.Text = inputStream.ReadLine();
+                    BrandBox.Text = inputStream.ReadLine();
+                    TypeBox.Text = inputStream.ReadLine();
+                    Condition.Text = inputStream.ReadLine();
+                    Cost.Text = inputStream.ReadLine();
+                    OS.Text = inputStream.ReadLine();
+                    Model.Text = inputStream.ReadLine();
+                    size.Text = inputStream.ReadLine();
+                    number.Text = inputStream.ReadLine();
+                    speed.Text = inputStream.ReadLine();
+                    HDDtBox.Text = inputStream.ReadLine();
+                    GPUBox.Text = inputStream.ReadLine();
+                    WebCamBox.Text = inputStream.ReadLine();
                     inputStream.Close();
                     inputStream.Dispose();
                 }
@@ -50,11 +70,11 @@ namespace ComputerPurchase.Views
         {
             Application.Exit();
         }
-
+        // to display the user choice in the next page
         private void NextButton_Click(object sender, EventArgs e)
         {
             _productInfo = new List<string>();
-            _productInfo.Add(PlatForm.Text); //0
+            _productInfo.Add(PlatForm.Text); 
             _productInfo.Add(Manufaturer.Text);
             _productInfo.Add(Condition.Text);
             _productInfo.Add(Model.Text);
@@ -65,13 +85,13 @@ namespace ComputerPurchase.Views
             Program.orderForm.Show();
             Program.selectForm.Hide();
         }
-
+        // to open selectForm
         private void AnotherProductButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.selectForm.Show();
         }
-
+        // to save a file
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
@@ -84,9 +104,22 @@ namespace ComputerPurchase.Views
                 using (StreamWriter outputStream = new StreamWriter(
                     File.Open(saveFileDialog.FileName, FileMode.Create)))
                 {
-
                     outputStream.WriteLine(PlatForm.Text);
-
+                    outputStream.WriteLine(Product.Text);
+                    outputStream.WriteLine(Manufaturer.Text);
+                    outputStream.WriteLine(MemoryBox.Text);
+                    outputStream.WriteLine(BrandBox.Text);
+                    outputStream.WriteLine(TypeBox.Text);
+                    outputStream.WriteLine(Condition.Text);
+                    outputStream.WriteLine(Cost.Text);
+                    outputStream.WriteLine(OS.Text);
+                    outputStream.WriteLine(Model.Text);
+                    outputStream.WriteLine(size.Text);
+                    outputStream.WriteLine(number.Text);
+                    outputStream.WriteLine(speed.Text);
+                    outputStream.WriteLine(HDDtBox.Text);
+                    outputStream.WriteLine(GPUBox.Text);
+                    outputStream.WriteLine(WebCamBox.Text);
 
 
                     outputStream.Close();

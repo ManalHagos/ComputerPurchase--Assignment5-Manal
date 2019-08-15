@@ -1,3 +1,10 @@
+/*
+ * CompuuterPurchase
+ * Manal Hagos
+ * 301027317
+ * JULY/28/2019
+ * THIS IS THE Product class 
+ */
 namespace ComputerPurchase.Data
 {
     using System;
