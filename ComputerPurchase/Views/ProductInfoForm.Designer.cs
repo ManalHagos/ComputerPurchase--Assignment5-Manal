@@ -563,7 +563,6 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductInfoForm";
-            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ProductInfoBox.ResumeLayout(false);

@@ -38,7 +38,7 @@ namespace ComputerPurchase.Views
             ProductDataGridView.ClearSelection();
             NextButton.Enabled = false;
         }
-
+        //next button is enable
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             textBox.Text = ProductDataGridViewSelectedItem();

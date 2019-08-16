@@ -74,13 +74,22 @@ namespace ComputerPurchase.Views
         private void NextButton_Click(object sender, EventArgs e)
         {
             _productInfo = new List<string>();
+            _productInfo.Add(Product.Text);
             _productInfo.Add(PlatForm.Text); 
             _productInfo.Add(Manufaturer.Text);
+            _productInfo.Add(MemoryBox.Text);
+            _productInfo.Add(BrandBox.Text);
+            _productInfo.Add(TypeBox.Text);
             _productInfo.Add(Condition.Text);
+            _productInfo.Add(OS.Text);
             _productInfo.Add(Model.Text);
             _productInfo.Add(size.Text);
-            _productInfo.Add(MemoryBox.Text);
-            _productInfo.Add(Cost.Text); //6
+            _productInfo.Add(number.Text);
+            _productInfo.Add(speed.Text);
+            _productInfo.Add(Cost.Text); 
+            _productInfo.Add(HDDtBox.Text);
+            _productInfo.Add(GPUBox.Text);
+            _productInfo.Add(WebCamBox.Text);
             Program.orderForm.FillForm(_productInfo);
             Program.orderForm.Show();
             Program.selectForm.Hide();
@@ -131,8 +140,6 @@ namespace ComputerPurchase.Views
       
         public void FillForm(List<string> info)
         {
-            //_productInfo = info; // change this line
-
             Product.Text = info[0];
             Cost.Text = info[1];
             Manufaturer.Text = info[2];
@@ -151,9 +158,6 @@ namespace ComputerPurchase.Views
             HDDtBox.Text = info[17];
         }
 
-        private void ProductInfoForm_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

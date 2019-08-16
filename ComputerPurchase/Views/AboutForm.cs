@@ -22,10 +22,10 @@ namespace ComputerPurchase.Views
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
+            this.labelProductName.Text = $"Product Name: {AssemblyProduct}";
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
+            this.labelCompanyName.Text =$"Company Name:Manal {AssemblyCompany}";
             this.textBoxDescription.Text = AssemblyDescription;
         }
 
@@ -102,7 +102,7 @@ namespace ComputerPurchase.Views
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
                 if (attributes.Length == 0)
                 {
-                    return "";
+                    return "manal";
                 }
                 return ((AssemblyCompanyAttribute)attributes[0]).Company;
             }
